@@ -3,9 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 # Installation
 1. clone repo
-2. Nodejs
+2. Install Nodejs
 3. Angular cli -> npm install -g @angular/cli
-4. npm install
+4. install dependency ->npm install
 5. ng serve 
 ## Development server
 
