@@ -1,0 +1,30 @@
+<div class="col-xs-12">
+    <button class="btn btn-success pull-right" routerLink="./create" style="margin-bottom: 10px;">create Task</button>
+<table class="table">
+<thead>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Created by</th>
+    <th>Updated by</th>
+    <th>Created/Updated</th>
+    <th>Action</th>
+</thead>
+<tbody>
+    <tr *ngFor="let t of tasks">
+        <td>{{t.name}}</td>
+        <td>{{t.description}}</td>
+        <td>{{t.status}}</td>
+        <td>{{t.created_by}}</td>
+        <td>{{t.updated_by || 'N/A'}}</td>
+        <td>{{t.created_on | date:'short'}}
+         <p>
+         {{t.updated_on | date:'short'}}
+        </td>
+        <td><button class="btn btn-default" (click)="editTask(t.id)">Edit</button>
+            <button class="btn btn-default" (click)="deleteTask(t.id)">Delete</button>
+        </td>
+    </tr>
+</tbody>
+</table>
+</div>

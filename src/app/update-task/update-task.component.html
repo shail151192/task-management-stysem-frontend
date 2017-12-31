@@ -1,0 +1,15 @@
+<div class="col-md-4 col-md-offset-4" style= "background: #d7d3d3; padding: 30px;">
+    <h3>Edit Task</h3>
+    <form (ngSubmit)= "updateTask()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]= "task.name">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea type="text" class="form-control" id="des" name="des" [(ngModel)]="task.description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success pull-right" style="margin-left: 10px;" [disabled]="!task.name || !task.description">Save</button>
+        <button type="button" class="btn btn-primary pull-right" (click)="backButton()">Back</button>
+    </form>
+</div>

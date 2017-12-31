@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Task Management System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+      </div>
+      <h4 style="color:#fff; margin-right: 10px; text-transform: capitalize;">{{username}}</h4>
+      <button class="btn btn-warning" (click)= "logout()" *ngIf="username">Logout</button>
+</nav>
